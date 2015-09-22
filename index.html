@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage icecream;
+PImage guitar;
+PImage rainbow;
+
+void setup(){
+
+
+size( 1000, 1000 );
+background(0,0,0);
+frameRate( 30 );
+
+icecream = loadImage("images/icecream.jpg");
+guitar = loadImage("images/guitar.jpg");
+rainbow = loadImage("images/rainbow.jpg");
+
+
+
+
+}
+
+
+void draw()
+{
+image(icecream,70,70,150,300);
+image(guitar,620,70,280,250);
+image(rainbow,270,70,280,250);
+
+stroke(255,255,255);
+fill(128,255,0);
+rect(108,420,70,50);
+
+stroke(255,255,255);
+fill(0,255,255);
+rect(368,420,70,50);
+
+stroke(255,255,255);
+fill(127,0,255);
+rect(718,420,70,50);
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
