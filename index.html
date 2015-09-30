@@ -7,18 +7,13 @@ PImage icecream;
 PImage guitar;
 PImage rainbow;
 
-void setup(){
+void setup()
+{
 
 
-size( 1000, 1000 );
-background(0,0,0);
+size( 500,500 );
+
 frameRate( 30 );
-
-icecream = loadImage("images/icecream.jpg");
-guitar = loadImage("images/guitar.jpg");
-rainbow = loadImage("images/rainbow.jpg");
-
-
 
 
 }
@@ -26,23 +21,28 @@ rainbow = loadImage("images/rainbow.jpg");
 
 void draw()
 {
-image(icecream,70,70,150,300);
-image(guitar,620,70,280,250);
-image(rainbow,270,70,280,250);
+	background(0,0,0);
 
-stroke(255,255,255);
-fill(128,255,0);
-rect(108,420,70,50);
+	fill(0,255,255);
+	rect(50,150,200,100);
 
-stroke(255,255,255);
-fill(0,255,255);
-rect(368,420,70,50);
 
-stroke(255,255,255);
-fill(127,0,255);
-rect(718,420,70,50);
+	text(mouseX,10,10);
+	text(mouseY,50,10);
+        
+    if (mousePressed == true && mouseButton == LEFT)
+    {
+        if (mouseX > 50 && mouseX < 50+200 &&
+            mouseY > 150 && mouseY < 150+100)
+        {
+		    text("Hello",50,400); 
+        }
+        
+    }
+    
+    
+    
 }
-
 </script>
 <canvas id="mycanvas"></canvas>
 </head>
